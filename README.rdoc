@@ -1,0 +1,5 @@
+== README
+
+Fibonacci Salad
+
+Prepares Fibonacci Salad in the Kitchen and serves it on a grid

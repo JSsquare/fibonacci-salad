@@ -1,0 +1,83 @@
+<table>
+  <tr>
+  <% @fib_salad.each_with_index do |each_item, index| %>
+    <%  case index
+      when 0..3 %>
+         <td><%= each_item %></td>
+    <% end  %>
+  <%end%>
+  </tr>
+  <tr>
+    <% @fib_salad.each_with_index do |each_item, index| %>
+        <%  case index
+              when 4..7 %>
+            <td><%= each_item %></td>
+        <% end  %>
+    <%end%>
+  </tr>
+  <tr>
+    <% @fib_salad.each_with_index do |each_item, index| %>
+        <%  case index
+              when 8..11 %>
+            <td><%= each_item %></td>
+        <% end  %>
+    <%end%>
+  </tr>
+  <tr>
+    <% @fib_salad.each_with_index do |each_item, index| %>
+        <%  case index
+              when 12..15 %>
+            <td><%= each_item %></td>
+        <% end  %>
+    <%end%>
+  </tr>
+</table>
+<br/> <br/>
+<form name="input" action="<%=root_url%>" >
+  <input type="number" class="text_style" autocomplete="off" name="fib_num" onkeyup="if (/\D/g.test(this.value)) this.value = this.value.replace(/\D/g,'')" maxlength="2">
+  <input type="submit" class="btn" value="Generate">
+</form>
+
+
+<style>
+    .text_style {
+        width: 100px;
+        padding: 10px 10px;
+        font-size: 14px;
+        color: #007700;
+        border: 1px solid #FFF;
+        border-radius: 5px;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.50);
+        -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.50);
+        -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.50);
+    }
+
+    .btn {
+        background: #009926;
+        border-radius: 10px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 14px;
+        padding: 10px 20px 10px 20px;
+
+    }
+
+
+    body {
+        padding: 50px;
+    }
+
+    table,th {
+        border: 2px solid black;
+        border-collapse: collapse;
+    }
+    td {
+        border: 2px solid black;
+        border-collapse: collapse;
+        width: 50px; height: 50px;
+    }
+
+
+
+
+</style>
